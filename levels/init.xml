@@ -23,7 +23,7 @@ bgm specifies what song if any to play at the start of the game.
 levelPath and resourcePath specify where all resource and level path specifications
 should be relative to.-->
 
-<sburb name="testProject" version="1.0" description="initialization"
+<sburb name="test" version="1.0" description="test description"
 	char='meenah' bgm='meenahSong' scale='2' 
 	levelPath='levels/test' resourcePath='resources/test'>
 
