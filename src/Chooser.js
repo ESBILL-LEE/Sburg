@@ -74,11 +74,11 @@ Sburb.Chooser.prototype.draw = function(){
 			width = Math.max(width,this.dialogs[i].lines[0].length*this.dialogs[i].charWidth+10);
 		}
 		height = this.dialogs[0].lineHeight*this.dialogs.length;
-		Sburb.stage.fillStyle = "#ff9900";
+		Sburb.stage.fillStyle = "#7289DA";
 		Sburb.stage.fillRect(x-6,y-6,width+12,height+13);
-		Sburb.stage.fillStyle = "#ffff00";
+		Sburb.stage.fillStyle = "#7289DA";
 		Sburb.stage.fillRect(x-2,y-2,width+4,height+5);
-		Sburb.stage.fillStyle = "#000000";
+		Sburb.stage.fillStyle = "#23272A";
 		Sburb.stage.fillRect(x,y,width,height);
 		for(i=0;i<this.dialogs.length;i++){
 			this.dialogs[i].draw();

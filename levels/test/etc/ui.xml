@@ -6,6 +6,7 @@
 	what fonts the system should try to use. The first one it finds that works it
 	will use -->
   <asset name='SburbFont' type='font'>
+		url: fonts/SourceSansPro-Regular.woff,
   	local:Courier New Bold, 
   	local:Courier New, 
     url: fonts/cour.woff,
