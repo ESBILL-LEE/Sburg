@@ -74,11 +74,11 @@ Sburb.Chooser.prototype.draw = function(){
 			width = Math.max(width,this.dialogs[i].lines[0].length*this.dialogs[i].charWidth+10);
 		}
 		height = this.dialogs[0].lineHeight*this.dialogs.length;
-		Sburb.stage.fillStyle = "#7289DA";
+		Sburb.stage.fillStyle = SburbConfig.chooserFill1 ? SburbConfig.chooserFill1 : "#ff9900";
 		Sburb.stage.fillRect(x-6,y-6,width+12,height+13);
-		Sburb.stage.fillStyle = "#7289DA";
+		Sburb.stage.fillStyle = SburbConfig.chooserFill2 ? SburbConfig.chooserFill2 : "#ffff00";
 		Sburb.stage.fillRect(x-2,y-2,width+4,height+5);
-		Sburb.stage.fillStyle = "#23272A";
+		Sburb.stage.fillStyle = SburbConfig.chooserFill3 ? SburbConfig.chooserFill3 : "#000000";
 		Sburb.stage.fillRect(x,y,width,height);
 		for(i=0;i<this.dialogs.length;i++){
 			this.dialogs[i].draw();
@@ -100,10 +100,10 @@ Sburb.Chooser.prototype.update = function(){
 				}else{
 					curDialog.start = 0;
 				}
-				curDialog.color = "#cccccc";	
+				curDialog.color = SburbConfig.chooserCursorSelected ? SburbConfig.chooserCursorSelected : "#cccccc";	
 			}else{
 				curDialog.start = 0;
-				curDialog.color = "#ffffff";
+				curDialog.color = SburbConfig.chooserCursor ? SburbConfig.chooserCursor : "#ffffff";
 			}
 		}
 	}
