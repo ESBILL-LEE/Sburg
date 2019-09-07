@@ -1,0 +1,7 @@
+{
+  "name": "sburg",
+  "scripts": {
+    "start": "node_modules/http-server/bin/http-server projects",
+    "build": "./build.sh"
+  }
+}
