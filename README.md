@@ -1,3 +1,28 @@
+# Setup
+
+1. Clone this repository.
+2. Run `npm install`
+3. ???
+4. Profit!
+
+# Running Sburg locally
+
+First, build Sburg and copy `Sburb.min.js` to your project folder (`altgenbound` is used as an example). Then run `npm run start` to start a local web server.
+```
+$ cd Sburg
+$ npm run build
+$ mv Sburb.min.js ./projects/altgenbound/
+# npm run start
+```
+
+# Project layout
+
+The projects in this repo, including HTML, assets, SburbML and other "deployables", should be in a self-contained folder within `./projects`. This differs from the original WP repository which split its levels and resources in the repository root. Each project should be immediately deployable, the only requirement being to drop a copy of `Sburb.min.js` in the project folder root, which can be made at any time by running `npm run build`.
+
+Projects also include a `config.js` file in the project root, which contains settings for things normally hardcoded into the Sburb engine (e. chooser colours).
+
+# Original copyright notice
+
 Copyright (c) 2012, Alexis Beingessner
 All rights reserved.
 
