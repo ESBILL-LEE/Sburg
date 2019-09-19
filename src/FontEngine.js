@@ -308,6 +308,11 @@ Sburb.FontEngine.prototype.parsePrefix = function(prefix){
 
 //get the colour of a prefix
 Sburb.FontEngine.prototype.prefixColouration = function(prefix){
+
+	if(typeof SburbConfig !== "undefined" && SburbConfig.prefixColours && SburbConfig.prefixColours[prefix.toLowerCase()]) {
+		return SburbConfig.prefixColours[prefix.toLowerCase()];
+	}
+	
 	if(this.prefixColours[prefix.toLowerCase()]){
 		return this.prefixColours[prefix.toLowerCase()];
 	}else{
