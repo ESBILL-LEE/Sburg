@@ -19,7 +19,7 @@
 
 <assets>
 	<asset name='dickleSheet' type='graphic'>chars/karkat/karkat.png</asset>
-	<asset name='dickleSong' type='audio'>audio/music/muscles.oga;audio/music/muscles.mp3</asset>
+	<asset name='dickleSong' type='audio'>audio/music/grudge.mp3</asset>
 	<asset name='dickle_talk' type='graphic'>dialogs/karkat/karkat_talk.png</asset>
 </assets>
 
