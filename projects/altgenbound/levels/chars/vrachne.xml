@@ -5,7 +5,7 @@
 	
 	<character class='vrachne' name='vrachne' sx='-50' sy='-115' sWidth='100' sHeight='130' width='35' height='25' sheet='vrachneSheet' state='walkFront' facing='Front'></character>
 	
-	<action class='bevrachne' name='Be Vrachnesprite.' command='macro'>
+	<action class='beVrachne' name='Be Vrachnesprite.' command='macro'>
 		<args>
 			<action command='changeChar' noDelay='true'>
 				<args>vrachne</args>
