@@ -43,23 +43,23 @@ var SburbConfig = {
       "frameInterval": 2
     },
     "walkFront": {
-      "startPos": 4,
-      "length": 2,
+      "startPos": 8,
+      "length": 4,
       "frameInterval": 4
     },
     "walkRight": {
-      "startPos": 6,
-      "length": 2,
+      "startPos": 12,
+      "length": 4,
       "frameInterval": 4
     },
     "walkBack": {
-      "startPos": 8,
-      "length": 2,
+      "startPos": 16,
+      "length": 4,
       "frameInterval": 4
     },
     "walkLeft": {
-      "startPos": 10,
-      "length": 2,
+      "startPos": 20,
+      "length": 4,
       "frameInterval": 4
     }
   }
