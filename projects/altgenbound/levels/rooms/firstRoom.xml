@@ -131,6 +131,9 @@ safe than sorry.-->
   				<args>vrachne,Follow.</args>
   			</action>
   		</action>
+			<action command='unfollow' sprite='dickle' name='Stop following.'>
+				<args>vrachne</args>
+			</action>
 			<action command="talk" name="Ask a question.">
 				<args>
 					@dickle_talk what should i ask about?

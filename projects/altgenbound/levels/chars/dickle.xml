@@ -3,7 +3,7 @@
 <classes>
 	<animation class='dickle-dialog' frameInterval='6' x='-180' y='-524'/>
 	
-	<character class='dickle' name='dickle' sx='-29' sy='-48' sWidth='58' sHeight='96' width='29' height='24' sheet='dickleSheet' state='walkFront' facing='Front'></character>
+	<character class='dickle' name='dickle' sx='-29' sy='-48' sWidth='58' sHeight='96' width='30' height='30' sheet='dickleSheet' state='walkFront' facing='Front'></character>
 	
 	<action class='beDickle' name='Be Dickle.' command='macro'>
 		<args>
