@@ -27,15 +27,45 @@ Sburb.Character = function(name,x,y,width,height,sx,sy,sWidth,sHeight,sheet,boot
 		sWidth = typeof sWidth == "number" ? sWidth : width;
 		sHeight = typeof sHeight == "number" ? sHeight : height;
 
-		this.addAnimation(new Sburb.Animation("idleFront",sheet,sx,sy,sWidth,sHeight,0,1,2));
-		this.addAnimation(new Sburb.Animation("idleRight",sheet,sx,sy,sWidth,sHeight,1,1,2));
-		this.addAnimation(new Sburb.Animation("idleBack",sheet,sx,sy,sWidth,sHeight,2,1,2));
-		this.addAnimation(new Sburb.Animation("idleLeft",sheet,sx,sy,sWidth,sHeight,3,1,2));
-		this.addAnimation(new Sburb.Animation("walkFront",sheet,sx,sy,sWidth,sHeight,4,2,4));
-		this.addAnimation(new Sburb.Animation("walkRight",sheet,sx,sy,sWidth,sHeight,6,2,4));
-		this.addAnimation(new Sburb.Animation("walkBack",sheet,sx,sy,sWidth,sHeight,8,2,4));
-		this.addAnimation(new Sburb.Animation("walkLeft",sheet,sx,sy,sWidth,sHeight,10,2,4));
-	
+		this.addAnimation(new Sburb.Animation("idleFront",sheet,sx,sy,sWidth,sHeight,
+			SburbConfig["characterAnimation"]["idleFront"]["startPos"] ? SburbConfig["characterAnimation"]["idleFront"]["startPos"] : 0,
+			SburbConfig["characterAnimation"]["idleFront"]["length"] ? SburbConfig["characterAnimation"]["idleFront"]["length"] : 1,
+			SburbConfig["characterAnimation"]["idleFront"]["frameInterval"] ? SburbConfig["characterAnimation"]["idleFront"]["frameInterval"] : 2));
+
+		this.addAnimation(new Sburb.Animation("idleRight",sheet,sx,sy,sWidth,sHeight,
+			SburbConfig["characterAnimation"]["idleRight"]["startPos"] ? SburbConfig["characterAnimation"]["idleRight"]["startPos"] : 1,
+			SburbConfig["characterAnimation"]["idleRight"]["length"] ? SburbConfig["characterAnimation"]["idleRight"]["length"] : 1,
+			SburbConfig["characterAnimation"]["idleRight"]["frameInterval"] ? SburbConfig["characterAnimation"]["idleRight"]["frameInterval"] : 2));
+
+		this.addAnimation(new Sburb.Animation("idleBack",sheet,sx,sy,sWidth,sHeight,
+			SburbConfig["characterAnimation"]["idleBack"]["startPos"] ? SburbConfig["characterAnimation"]["idleBack"]["startPos"] : 2,
+			SburbConfig["characterAnimation"]["idleBack"]["length"] ? SburbConfig["characterAnimation"]["idleBack"]["length"] : 1,
+			SburbConfig["characterAnimation"]["idleBack"]["frameInterval"] ? SburbConfig["characterAnimation"]["idleBack"]["frameInterval"] : 2));
+
+		this.addAnimation(new Sburb.Animation("idleLeft",sheet,sx,sy,sWidth,sHeight,
+			SburbConfig["characterAnimation"]["idleLeft"]["startPos"] ? SburbConfig["characterAnimation"]["idleLeft"]["startPos"] : 3,
+			SburbConfig["characterAnimation"]["idleLeft"]["length"] ? SburbConfig["characterAnimation"]["idleLeft"]["length"] : 1,
+			SburbConfig["characterAnimation"]["idleLeft"]["frameInterval"] ? SburbConfig["characterAnimation"]["idleLeft"]["frameInterval"] : 2));
+
+		this.addAnimation(new Sburb.Animation("walkFront",sheet,sx,sy,sWidth,sHeight,
+			SburbConfig["characterAnimation"]["walkFront"]["startPos"] ? SburbConfig["characterAnimation"]["walkFront"]["startPos"] : 4,
+			SburbConfig["characterAnimation"]["walkFront"]["length"] ? SburbConfig["characterAnimation"]["walkFront"]["length"] : 2,
+			SburbConfig["characterAnimation"]["walkFront"]["frameInterval"] ? SburbConfig["characterAnimation"]["walkFront"]["frameInterval"] : 4));
+
+		this.addAnimation(new Sburb.Animation("walkRight",sheet,sx,sy,sWidth,sHeight,
+			SburbConfig["characterAnimation"]["walkRight"]["startPos"] ? SburbConfig["characterAnimation"]["walkRight"]["startPos"] : 6,
+			SburbConfig["characterAnimation"]["walkRight"]["length"] ? SburbConfig["characterAnimation"]["walkRight"]["length"] : 2,
+			SburbConfig["characterAnimation"]["walkRight"]["frameInterval"] ? SburbConfig["characterAnimation"]["walkRight"]["frameInterval"] : 4));
+
+		this.addAnimation(new Sburb.Animation("walkBack",sheet,sx,sy,sWidth,sHeight,
+			SburbConfig["characterAnimation"]["walkBack"]["startPos"] ? SburbConfig["characterAnimation"]["walkBack"]["startPos"] : 8,
+			SburbConfig["characterAnimation"]["walkBack"]["length"] ? SburbConfig["characterAnimation"]["walkBack"]["length"] : 2,
+			SburbConfig["characterAnimation"]["walkBack"]["frameInterval"] ? SburbConfig["characterAnimation"]["walkBack"]["frameInterval"] : 4));
+
+		this.addAnimation(new Sburb.Animation("walkLeft",sheet,sx,sy,sWidth,sHeight,
+			SburbConfig["characterAnimation"]["walkLeft"]["startPos"] ? SburbConfig["characterAnimation"]["walkLeft"]["startPos"] : 10,
+			SburbConfig["characterAnimation"]["walkLeft"]["length"] ? SburbConfig["characterAnimation"]["walkLeft"]["length"] : 2,
+			SburbConfig["characterAnimation"]["walkLeft"]["frameInterval"] ? SburbConfig["characterAnimation"]["walkLeft"]["frameInterval"] : 4));
 
 		this.startAnimation("walkFront");
 	}else{

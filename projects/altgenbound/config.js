@@ -21,30 +21,46 @@ var SburbConfig = {
     "makin":"#AA72C0"
   },
 
-  "characterAnimationOverrides": {
+  "characterAnimation": {
     "idleFront": {
-
+      "startPos": 0,
+      "length": 1,
+      "frameInterval": 2
     },
     "idleRight": {
-
+      "startPos": 1,
+      "length": 1,
+      "frameInterval": 2
     },
     "idleBack": {
-
+      "startPos": 2,
+      "length": 1,
+      "frameInterval": 2
     },
     "idleLeft": {
-
+      "startPos": 3,
+      "length": 1,
+      "frameInterval": 2
     },
     "walkFront": {
-
+      "startPos": 4,
+      "length": 2,
+      "frameInterval": 4
     },
     "walkRight": {
-
+      "startPos": 6,
+      "length": 2,
+      "frameInterval": 4
     },
     "walkBack": {
-
+      "startPos": 8,
+      "length": 2,
+      "frameInterval": 4
     },
     "walkLeft": {
-      
+      "startPos": 10,
+      "length": 2,
+      "frameInterval": 4
     }
   }
 }
