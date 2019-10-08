@@ -19,5 +19,32 @@ var SburbConfig = {
     "vrachne":"#1025C3",
     "bowman":"#720720",
     "makin":"#AA72C0"
+  },
+
+  "characterAnimationOverrides": {
+    "idleFront": {
+
+    },
+    "idleRight": {
+
+    },
+    "idleBack": {
+
+    },
+    "idleLeft": {
+
+    },
+    "walkFront": {
+
+    },
+    "walkRight": {
+
+    },
+    "walkBack": {
+
+    },
+    "walkLeft": {
+      
+    }
   }
 }
