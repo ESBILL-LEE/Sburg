@@ -94,7 +94,11 @@ safe than sorry.-->
   		<action command='talk' name='Talk.'>
   			<args>
   				@dickle_talk Hey what're you doing in my sample. 
-  				@dickle_talk This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
+  				@dickle_airquotes This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
+					@dickle_explaining Hey what're you doing in my sample. 
+  				@dickle_fingerguns This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
+					@dickle_flustered Hey what're you doing in my sample. 
+  				@dickle_think This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
   				@karkat_talk what
   				@dickle_talk%twitterBox ouuuuuuut
   			</args>
