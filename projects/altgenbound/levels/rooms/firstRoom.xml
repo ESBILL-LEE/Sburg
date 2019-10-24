@@ -20,6 +20,8 @@ is entered for the first time. -->
 	find that's a good compromise for performance/complexity. 
 	
 	utils/image_slice/ has a utility for doing this automatically. -->
+
+	<!--
   <asset name='firstRoomBG_0_0' type='graphic'>backgrounds/slices/firstRoomBG_0_0.png</asset>
 	<asset name='firstRoomBG_0_1' type='graphic'>backgrounds/slices/firstRoomBG_0_1.png</asset>
 	<asset name='firstRoomBG_0_2' type='graphic'>backgrounds/slices/firstRoomBG_0_2.png</asset>
@@ -32,9 +34,12 @@ is entered for the first time. -->
 	<asset name='firstRoomBG_3_0' type='graphic'>backgrounds/slices/firstRoomBG_3_0.png</asset>
 	<asset name='firstRoomBG_3_1' type='graphic'>backgrounds/slices/firstRoomBG_3_1.png</asset>
 	<asset name='firstRoomBG_3_2' type='graphic'>backgrounds/slices/firstRoomBG_3_2.png</asset>
+	-->
 	
 	<!-- note that there are missing images in the FG where transparent regions
 	have been discarded. This is handled correctly! -->
+
+	<!--
 	<asset name='firstRoomFG_1_0' type='graphic'>backgrounds/slices/firstRoomFG_1_0.png</asset>
 	<asset name='firstRoomFG_1_2' type='graphic'>backgrounds/slices/firstRoomFG_1_2.png</asset>
 	<asset name='firstRoomFG_2_0' type='graphic'>backgrounds/slices/firstRoomFG_2_0.png</asset>
@@ -42,6 +47,10 @@ is entered for the first time. -->
 	<asset name='firstRoomFG_3_0' type='graphic'>backgrounds/slices/firstRoomFG_3_0.png</asset>
 	<asset name='firstRoomFG_3_1' type='graphic'>backgrounds/slices/firstRoomFG_3_1.png</asset>
 	<asset name='firstRoomFG_3_2' type='graphic'>backgrounds/slices/firstRoomFG_3_2.png</asset>
+	-->
+
+	<asset name='firstRoomFG' type='graphic'>backgrounds/forest/foreground.png</asset>
+	<asset name='firstRoomBG' type='graphic'>backgrounds/forest/background.png</asset>
 	
 	<!-- The map is a special black-and-white image describing walkable areas in
 	a room. White pixels are walkable, black are unwalkable. This actually consumes
@@ -49,7 +58,8 @@ is entered for the first time. -->
 	scale is a good compromise for performance/accuracy. However in sufficiently
 	large rooms this is still too much, and 25% scale in necessary. This leads to
 	a substantial sarcifice in hit-detection quality, so avoid big rooms!-->
-  <asset name='firstRoomMap' type='graphic'>backgrounds/firstRoomMap.png</asset>
+
+	<asset name='firstRoomMap' type='graphic'>backgrounds/forest/collision-map.png</asset>
   
   <!-- an item to be found in a chest, nothing special about it-->
   <asset name='item1' type='graphic'>objects/items/item1.png</asset>
@@ -76,7 +86,7 @@ safe than sorry.-->
 	camera can see. However width and height can be explicitly
 	specified here if need be. The walkableMap is theoretically optional, but
 	it's incredibly useful and easy to use. -->
-  <room name='firstRoom' walkableMap='firstRoomMap' scale='4'>
+  <room name='firstRoom' walkableMap='firstRoomMap' mapScale='1'>
   
   	<!-- here we drop in our character. Since we specified everything in 
   	chars/meenah.xml, we don't have to do much here. We just need to specify
@@ -85,7 +95,7 @@ safe than sorry.-->
   	internal tags that may have been part of the class. Template classes
   	are a great way to seperate logic and content, as well as recycle common
   	patterns. -->
-  	<character class='dickle' x='500' y='500'>
+  	<character class='dickle' x='346' y='1028'>
   		<action class='beDickle'/>
   	</character>
   
@@ -232,6 +242,7 @@ safe than sorry.-->
   	
   	<!-- here we're adding a standard chest based on a template class found in
   	etc/standardTemplates.xml -->
+
   	<sprite class='chest1' name='chest1' x='166' y='498'>
 			<action command='openChest' name='Open.'>
 				<args>
@@ -239,7 +250,7 @@ safe than sorry.-->
 				</args>
 			</action>
 		</sprite>
-   
+
    <!-- here we're adding in our BG and FG. This is the second half of our 
    optimization. To avoid creating a dozen sprites for every single tile, we
    specify that this image has been sliced up into tiles. Then we just specify
@@ -250,12 +261,12 @@ safe than sorry.-->
    <!-- Note no depthing specification puts a sprite in the background. Not 
    specifying coordinates also puts them at (0,0) by default (top-left corner). -->
     <sprite name='firstRoomBG'>
-    	<animation sheet='firstRoomBG' sliced='true' numCols='4' numRows='3' colSize='500' rowSize='500'/>
+    	<animation sheet='firstRoomBG'/>
     </sprite>
 
 		<!-- note depthing='2' is what puts this in the foreground -->
 		<sprite name='firstRoomFG' depthing='2'>
-    	<animation sheet='firstRoomFG' sliced='true' numCols='4' numRows='3' colSize='500' rowSize='500'/>
+    	<animation sheet='firstRoomFG'/>
     </sprite>
   </room>
 </rooms>
