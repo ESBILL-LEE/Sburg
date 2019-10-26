@@ -10,6 +10,12 @@ function parseParams(info){
 
 var commands = {};
 
+// Toggle collisions for a sprite
+// syntax: spriteName
+commands.toggleCollisions = function(info) {
+	Sburb.sprites[info].collidable = !Sburb.sprites[info].collidable;
+	console.log("Toggled collisions for '" + info + "': " + Sburb.sprites[info].collidable);
+}
 
 //Create a Dialog
 //syntax: dialog syntax
