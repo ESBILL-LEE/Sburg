@@ -147,6 +147,9 @@ safe than sorry.-->
   		</action>
 			<action command='unfollow' sprite='dickle' name='Stop following.'>
 				<args>vrachne</args>
+				<action command='toggleCollisions'>
+					<args>vrachne</args>
+				</action>
 			</action>
 			<action command="talk" name="Ask a question.">
 				<args>
