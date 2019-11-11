@@ -2,12 +2,13 @@
 own self-contained file. This isn't fundamentally necessary, but it's very
 natural. It also allows you to very easily load content only once a room 
 is entered for the first time. -->
-<sburb description="first room">
+<sburb description="forest">
 
 <dependencies>
 	<dependency>chars/dickle.xml</dependency>
 	<dependency>chars/vrachne.xml</dependency>
 	<dependency>chars/karkat.xml</dependency> <!-- and karkat -->
+	<dependency>rooms/tree.xml</dependency>
 </dependencies>
 
 <assets>
@@ -134,6 +135,11 @@ safe than sorry.-->
 						</action>
 					</args>
 				</action>
+			</action>
+			<action command="changeRoom" name="Move.">
+				<args>
+					tree,351,1198
+				</args>
 			</action>
 		</character>
   	
