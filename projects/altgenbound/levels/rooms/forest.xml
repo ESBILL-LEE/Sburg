@@ -7,6 +7,7 @@ is entered for the first time. -->
 <dependencies>
 	<dependency>chars/dickle.xml</dependency>
 	<dependency>chars/vrachne.xml</dependency>
+	<dependency>chars/quincy.xml</dependency>
 	<dependency>chars/karkat.xml</dependency> <!-- and karkat -->
 	<dependency>rooms/tree.xml</dependency>
 </dependencies>
@@ -102,7 +103,7 @@ safe than sorry.-->
   
   	<character class='karkat' x='670' y='1826'>
   		<action class='beKarkat'/>
-  		<action command='talk' name='Talk.'>
+  		<action command='talk' name='Dickle talksprite test.'>
   			<args>
   				@dickle_talk Hey what're you doing in my sample. 
   				@dickle_airquotes This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
@@ -110,10 +111,32 @@ safe than sorry.-->
   				@dickle_fingerguns This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
 					@dickle_flustered Hey what're you doing in my sample. 
   				@dickle_think This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
+					@dickle_glasses Hey what're you doing in my sample. 
+  				@dickle_tears This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
+					@dickle_happy Hey what're you doing in my sample. 
+  				@dickle_sad This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
   				@karkat_talk what
   				@dickle_talk%twitterBox ouuuuuuut
   			</args>
   		</action>
+			<action command='talk' name='Vrachne talksprite test.'>
+				<args>
+  				@vrachne_talk Hey what're you doing in my sample. 
+  				@vrachne_airquotes This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
+					@vrachne_armup Hey what're you doing in my sample. 
+  				@vrachne_eye This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
+					@vrachne_horror Hey what're you doing in my sample. 
+  				@vrachne_shrug This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
+				</args>
+			</action>
+			<action command='talk' name='Quincy talksprite test.'>
+				<args>
+					@quincy_armscrossed Hey what're you doing in my sample. 
+  				@quincy_friendly This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
+					@quincy_gruff Hey what're you doing in my sample. 
+  				@quincy_talk This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
+				</args>
+			</action>
   	</character>
 
 		<character class='karkat' name='dialogueTest' x='600' y='2020'>
